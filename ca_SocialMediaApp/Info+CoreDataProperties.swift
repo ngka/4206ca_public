@@ -1,0 +1,28 @@
+//
+//  Info+CoreDataProperties.swift
+//  ca_SocialMediaApp
+//
+//  Created by user on 2/12/2023.
+//
+//
+
+import Foundation
+import CoreData
+
+
+extension Info {
+
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Info> {
+        return NSFetchRequest<Info>(entityName: "Info")
+    }
+
+    @NSManaged public var title: String?
+    @NSManaged public var content: String?
+    @NSManaged public var image: URL?
+    @NSManaged public var location: String?
+
+}
+
+extension Info : Identifiable {
+
+}
